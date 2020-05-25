@@ -25,7 +25,7 @@ employee_route.route('/create-employee').post(async(req,res)=>{
     const firstName = req.body.firstName
     const lastName = req.body.lastName
     const email = req.body.email
-     const salary = req.body.salary
+    const salary = req.body.salary
     const  dob = req.body.dob
     console.log(email)
 
