@@ -8,7 +8,7 @@ let emp_Schema = require('../employee_schema/employeeSchema')
 
 
 //get employee
-employee_route.route('/').get(async(req,res)=>{
+employee_route.route('/get-employees').get(async(req,res)=>{
     res.send(await emp_Schema.find())
 
 })

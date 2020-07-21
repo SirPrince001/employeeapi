@@ -13,6 +13,13 @@ const config_DB = require("./empolyee_db/database");
 const emp_route = require("./employee_route/employee");
 require("dotenv").config();
 
+app.get('/', (req,res) =>{
+    res.json({
+        status:200,
+        message:"welcome"
+    });
+});
+
 //connecting to Database
 mongoose
   .connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
