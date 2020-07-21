@@ -37,6 +37,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cor());
 app.use(emp_route);
 
-app.listen(5000, () => {
+const port = 5000 || process.env.PORT;
+app.listen(port, () => {
   console.log("Listening to port 5000");
 });
