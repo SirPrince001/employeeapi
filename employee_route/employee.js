@@ -44,6 +44,7 @@ employee_route.route("/create-employee").post(async (req, res) => {
     res.send(
       "User exist with this details , please try again with another details"
     );
+    res.redirect('https://goofy-galileo-4a23b4.netlify.app/')
   }
 });
 
