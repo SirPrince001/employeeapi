@@ -29,6 +29,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cor());
 app.use(emp_route);
+app.get('/' , (req,res)=>{
+  res.json({
+    "message":"Welcome "
+  })
+})
 
 const port = process.env.PORT
 app.listen(port, () => {
