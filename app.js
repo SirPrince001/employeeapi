@@ -31,7 +31,7 @@ app.use(cor());
 app.use(emp_route);
 app.get('/' , (req,res)=>{
   res.json({
-    "message":"Welcome "
+    message:Welcome
   })
 })
 
