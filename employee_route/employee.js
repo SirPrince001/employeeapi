@@ -39,7 +39,7 @@ employee_route.route("/create-employee").post(async (req, res) => {
   if (!(await emp_Schema.findOne({ email: email }))) {
     let data = await newEmployee.save();
 
-    res.send(data);
+    res.send('You have sucessfully register now employee');
   } else {
     res.send(
       "User exist with this details , please try again with another details"
