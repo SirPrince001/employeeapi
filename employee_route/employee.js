@@ -39,8 +39,8 @@ employee_route.route("/create-employee").post(async (req, res) => {
   if (!(await emp_Schema.findOne({ email: email }))) {
     let data = await newEmployee.save();
 
-   // res.send('You have sucessfully register now employee');
-    res.redirect('https://goofy-galileo-4a23b4.netlify.app/')
+   res.send('You have sucessfully register now employee');
+    
   } else {
     res.send(
       "User exist with this details , please try again with another details"
@@ -48,6 +48,18 @@ employee_route.route("/create-employee").post(async (req, res) => {
     
   }
 });
+
+//login
+employee_route.route('/login').post(async(req,res)=>{
+  let userEmail = req.body
+  userEmail = await emp_Schema.findOne({email:email})
+  if(!userEmail){
+    res.send('provide valid email address')
+  }else{
+    res.send('Login successfully')
+    res.redirect('https://goofy-galileo-4a23b4.netlify.app/')
+  }
+})
 
 // update employee
 
