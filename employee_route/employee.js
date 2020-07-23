@@ -59,8 +59,11 @@ employee_route.route('/login').post(async(req,res)=>{
   if(!userEmail){
     res.send('provide valid email address')
   }else{
+    res.send({
+      response:userEmail
+    })
     res.send('Login successfully')
-    res.redirect('https://goofy-galileo-4a23b4.netlify.app/')
+    //res.redirect('https://goofy-galileo-4a23b4.netlify.app/')
   }
 })
 
