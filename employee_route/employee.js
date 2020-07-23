@@ -54,15 +54,15 @@ employee_route.route("/create-employee").post(async (req, res) => {
 
 //login
 employee_route.route('/login').post(async(req,res)=>{
-  let userEmail = req.body
-  userEmail = await emp_Schema.findOne({email:email})
+  let userEmail = req.body.email
+  userEmail = await emp_Schema.findOne({email:userEmail})
   if(!userEmail){
     res.send('provide valid email address')
   }else{
     res.send({
       response:userEmail
     })
-    res.send('Login successfully')
+    
     //res.redirect('https://goofy-galileo-4a23b4.netlify.app/')
   }
 })
